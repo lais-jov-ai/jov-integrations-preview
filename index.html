@@ -440,7 +440,7 @@ html[data-theme="light"] .bsel{ background:#FFFFFF; }
 :root{ --sans:'Inter',Arial,Helvetica,sans-serif; }
 h1,h2,h3,h4{ font-family:var(--sans); font-weight:700; text-transform:none; letter-spacing:-0.018em; line-height:1.1; }
 .page-hero{ height:auto; min-height:clamp(360px,48vh,520px); padding:4.2rem 0 3.8rem; }
-.page-hero h1{ font-size:clamp(2.5rem,4.8vw,3.9rem); max-width:15em; margin-bottom:1.2rem; }
+.page-hero h1{ font-size:clamp(2.5rem,4.8vw,3.9rem); max-width:none; margin-bottom:1.2rem; }
 .page-hero .eyebrow{ margin-bottom:1.1rem; }
 .page-hero .lead{ max-width:34rem; }
 .eyebrow{ display:flex; align-items:center; gap:0.65rem; letter-spacing:0.14em; }
@@ -448,6 +448,7 @@ h1,h2,h3,h4{ font-family:var(--sans); font-weight:700; text-transform:none; lett
 .sec-h{ font-size:clamp(1.8rem,3.2vw,2.75rem); }
 /* section head: title left, support text right */
 .band > .wrap.center{ text-align:left; display:grid; grid-template-columns:minmax(0,1.08fr) minmax(0,0.92fr); column-gap:3.2rem; align-items:start; }
+.band > .wrap.center.nolead{ display:block; }
 .band > .wrap.center > *{ grid-column:1 / -1; }
 .band > .wrap.center > .sec-h{ grid-column:1; margin-bottom:0.6rem; }
 .band > .wrap.center > .sec-h + .lead{ grid-column:2; margin:0.45rem 0 0 !important; max-width:none; }
@@ -496,14 +497,14 @@ h1,h2,h3,h4{ font-family:var(--sans); font-weight:700; text-transform:none; lett
 </section>
 
 
-<section class="band slate"><div class="wrap center">
+<section class="band slate"><div class="wrap center nolead">
   <div class="eyebrow">How integrations work</div>
   <h2 class="sec-h reveal">If you use it, JOV connects to it<span class="gold">.</span></h2>
   </div>
   <div class="wrap"><div class="int-grid">
     <div class="wcard reveal"><div class="wi">01</div><h3>Custom APIs, CLI &amp; MCP</h3><p>JOV connects to any tool that exposes an API, CLI, or MCP endpoint.</p></div>
     <div class="wcard reveal"><div class="wi">02</div><h3>Browser automations</h3><p>Automate any web-based workflow without an API, where it&rsquo;s allowed.</p></div>
-    <div class="wcard reveal"><div class="wi">03</div><h3>Custom plugins &amp; connections</h3><p>Need a tool we don&rsquo;t support yet? We build the connection to it &mdash; including your own internal systems.</p></div>
+    <div class="wcard reveal"><div class="wi">03</div><h3>Custom plugins &amp; connections</h3><p>We already connect to most of your stack &mdash; and any custom one is a quick build when you need it.</p></div>
   </div></div>
   <style>
   .int-cap{font-family:var(--sans);font-weight:500;color:var(--mut);font-size:1.02rem;line-height:1.7;max-width:none;margin:3.4rem 0 0;padding-top:2.6rem;border-top:1px solid var(--line);text-align:left;transition:border-color .2s;}
